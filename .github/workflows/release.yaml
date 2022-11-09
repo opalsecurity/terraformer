@@ -1,10 +1,8 @@
 name: "tagged-release"
 on:
-  workflow_dispatch:
-    inputs:
-      version:
-        description: Bump Version
-        required: true
+  push:
+    tags:
+    - 'v*'
 jobs:
   tagged-release:
     name: "Tagged Release"
